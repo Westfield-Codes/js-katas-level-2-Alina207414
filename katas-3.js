@@ -18,7 +18,7 @@
  * Display gatekeeper name and keymaster name for this kata
  * @param = none
  * @return = none
- * /
+ */
 
 /* Function addStudents(count)
  * Create a students array, nothing in it. 
