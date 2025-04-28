@@ -1,70 +1,72 @@
-// Don't Edit! Just copy and paste. 
+/* Var Alert Prompt Conditional Switch 3 Functions */
 
-/* Loops & Arrays Katas */
-
-/* RANDOM STUDENT KATA:  */
-
-/* Global Variables */
-// Create an array called students, start empty. 
-var students = [];
-// Create an array called picked, start empty. 
-var picked = [];
-
-/* Function Main()
- * Set variable count to asking how many students there are.
- * Fill global array students by passing count as an argument to addStudents
- * Set gateKeeper = randStudent(), the name of a random student in the list
- * Set keymaster = randNewStudent(), name of a different random student
- * Display gatekeeper name and keymaster name for this kata
- * @param = none
- * @return = none
+/* FUNCTION main() 
+ * create a variable called color and prompt the user for a primary or secondary color
+ * if checkColor(color) says false, say "must be primary or secondary" and call main again.
+ * otherwise, display "the complementary color of [color] is [complementaryColor(color)]"
+ * @param: none (main never gets params)
+ * @return: none (main never gets returns
  */
 
-function main(){
-    let count = prompt("How many students are here?");
-    addStudents(count);
-    let gateKeeper = randStudent();
-    let keyMaster = randNewStudent();
-    alert("Gatekeeper = " + gateKeeper + " and Keymaster = " + keyMaster);
-}
-
-/* Function addStudents(count)
- * Use the students array, nothing in it. 
- * Use a for loop to add student names to the students array.
- * The loop should run count number of times. 
- * @param = count {integer}
- * @return = none
- */
-function addStudents(count){
-    for (let student = 1; student <= count; student++){
-        students.push(prompt("Next student?"));
+function main() {
+    let color = prompt("Enter a primary or secondary color");
+    if (!checkColor(color)) {
+        alert("must be primary or secondary");
+        main();
     }
-    console.log(students.toString());
+    else alert("the complementary color of "+color+ " is " + complementaryColor(color));
 }
 
-/* Function randStudent()
- * Set student = random number, 0 to length of students array.
- * Set name = element in students array at that random index.
- * Add name to picked array. 
- * Return the name of the random student
- * @param = none
- * @return = name {string}
+/* FUNCTION checkColor (color)
+ * set boolean goodColor to false
+ * use a compound conditional (or) to check for primary
+ * if it's a primary color, set goodColor to true
+ * otherwise, use a compound conditional (or) to check for secondary
+ * if it's a secondary color, set goodColor to true
+ * return goodColor
+ * @param: color (string)
+ * @return: goodColor (boolean)
  */
- function randStudent(){
-    return "Alina";
- }
-/* Function randNewStudent() (start with copy of randStudent)
- * Set student = "" and picked = 0. 
- * Loop while picked is not equal to -1
- * Set student = random number, 0 to length of students array.
- * Set name = element in students array at that random index.
- * Set picked = the index of that name the picked array. 
- * End the while loop.
- * Add name to picked array.
- * Return the name of the new random student
- * @param = none
- * @return = name {string}
+
+function checkColor(color) {
+   let goodColor = false;
+    if (color == "red" || color == "blue" || color == "yellow") goodColor = true;
+     else if (color == "purple" || color == "green" || color == "orange") goodColor = true;
+       return goodColor;
+    }
+    
+
+/* FUNCTION complementaryColor(color)
+ * create a variable called complement, set to ""
+ * use a switch function and switch on color
+ * (look at this: https://www.canva.com/colors/color-wheel)
+ * in the switch, assign the complementary color to complement
+ * @param: color (string)
+ * @return: complement (string)
  */
-function randNewStudent(){
-    return "Anhelina";
- }
+
+function complementaryColor(color) {
+    let complement = " ";
+    switch(color) {
+        case "red":
+          complement = "green";
+          break;
+        case "yellow":
+          complement = "purple";
+          break;
+          case "blue":
+            complement = "orange";
+            break;
+          case "green":
+            complement = "red";
+            break;
+            case "orange":
+                complement = "blue";
+                break;
+              case "purple":
+                complement = "yellow"
+                break;
+        default:
+      }
+      return complement;
+}
