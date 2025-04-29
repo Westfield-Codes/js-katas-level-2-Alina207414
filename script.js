@@ -21,10 +21,12 @@ var picked = [];
 /* Display gatekeeper name and keymaster name for this kata
 /* @param = none
 /* @return = none
-* /
+*/
 
 function main() {
-let student = confirm("How many student here?");
+let count = confirm("How many student here?");
+addStudents(count);
+
 
 }
 
