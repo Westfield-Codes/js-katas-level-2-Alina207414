@@ -1,72 +1,60 @@
-/* Var Alert Prompt Conditional Switch 3 Functions */
+// Don't Edit! Just copy and paste. 
 
-/* FUNCTION main() 
- * create a variable called color and prompt the user for a primary or secondary color
- * if checkColor(color) says false, say "must be primary or secondary" and call main again.
- * otherwise, display "the complementary color of [color] is [complementaryColor(color)]"
- * @param: none (main never gets params)
- * @return: none (main never gets returns
- */
+/* Loops & Arrays Katas */
+
+/* RANDOM STUDENT KATA:  */
+
+// Who will be gatekeeper and keymaster today?
+
+/* Global Variables */
+// Create an array called students, start empty. 
+// Create an array called picked, start empty. 
+
+var students = [];
+var picked = [];
+
+/* Function Main()
+/* Set variable count to asking how many students there are.
+/* Fill global array students by passing count as an argument to addStudents
+/* Set gateKeeper = randStudent(), the name of a random student in the list
+/* Set keymaster = randNewStudent(), name of a different random student
+/* Display gatekeeper name and keymaster name for this kata
+/* @param = none
+/* @return = none
+* /
 
 function main() {
-    let color = prompt("Enter a primary or secondary color");
-    if (!checkColor(color)) {
-        alert("must be primary or secondary");
-        main();
-    }
-    else alert("the complementary color of "+color+ " is " + complementaryColor(color));
+let student = confirm("How many student here?");
+
 }
 
-/* FUNCTION checkColor (color)
- * set boolean goodColor to false
- * use a compound conditional (or) to check for primary
- * if it's a primary color, set goodColor to true
- * otherwise, use a compound conditional (or) to check for secondary
- * if it's a secondary color, set goodColor to true
- * return goodColor
- * @param: color (string)
- * @return: goodColor (boolean)
+/* Function addStudents(count)
+ * Use a for loop to add student names to the global students array.
+ * The loop should run count number of times. 
+ * The loop should ask the user for a name and push it to the students array.
+ * Return the array of student names 
+ * @param = count {integer}
+ * @return = none
  */
 
-function checkColor(color) {
-   let goodColor = false;
-    if (color == "red" || color == "blue" || color == "yellow") goodColor = true;
-     else if (color == "purple" || color == "green" || color == "orange") goodColor = true;
-       return goodColor;
-    }
-    
-
-/* FUNCTION complementaryColor(color)
- * create a variable called complement, set to ""
- * use a switch function and switch on color
- * (look at this: https://www.canva.com/colors/color-wheel)
- * in the switch, assign the complementary color to complement
- * @param: color (string)
- * @return: complement (string)
+/* Function randStudent()
+ * Set student = random number, 0 to length of students array.
+ * Set name = element in students array at that random index.
+ * Add name to picked array. 
+ * Return the name of the random student
+ * @param = none
+ * @return = name {string}
  */
-
-function complementaryColor(color) {
-    let complement = " ";
-    switch(color) {
-        case "red":
-          complement = "green";
-          break;
-        case "yellow":
-          complement = "purple";
-          break;
-          case "blue":
-            complement = "orange";
-            break;
-          case "green":
-            complement = "red";
-            break;
-            case "orange":
-                complement = "blue";
-                break;
-              case "purple":
-                complement = "yellow"
-                break;
-        default:
-      }
-      return complement;
-}
+ 
+/* Function randNewStudent() (start with copy of randStudent)
+ * Set student = "" and picked = 0. 
+ * Loop while picked is not equal to -1
+ * Set student = random number, 0 to length of students array.
+ * Set name = element in students array at that random index.
+ * Set picked = the index of that name the picked array. 
+ * End the while loop.
+ * Add name to picked array.
+ * Return the name of the new random student
+ * @param = none
+ * @return = name {string}
+ */
