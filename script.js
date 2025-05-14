@@ -13,10 +13,11 @@
  */
 function makeList() {
     let shoppingList = "to buy: \n";
+    let shopArray = [];
     for (let item = 1; item <= 5; item++){ 
-        shoppingList+=prompt(" item " + item + "\n");
-           alert(shoppingList);
-        }   
+        shopArray.push(prompt(" item " + item));
+        }  
+        alert(shoppingList + shopArray.join("\n"));
     }
  
 /* 2. for loop and array with toString */
@@ -29,12 +30,13 @@ function makeList() {
  * at end of loop, alert the list title, followed by
  * the list with toString() method (it won't have line breaks)*/
 
+
 /* 3. for loop and array with join method 
 
 /* Same function, using previous code, BUT:
  * the at end, alert list with array.join() method with line breaks 
  * instead of commas */
- 
+
 /* 4. loops, arrays and functions */
 
 /* Same function, using previous code, but THIS TIME:
