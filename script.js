@@ -37,14 +37,6 @@
  * Convert that entry to an itemPrice array by using string.split() and use a comma as delimiter
  * Push the itemPrice array to shopArray
  */
-function makeList() {
-    let shoppingList = "to buy: \n";
-    let shopArray = [];
-    for (let item = 1; item <= 5; item++){ 
-        shopArray.push(prompt(" item " + item + " enter item name, price: like milk, 1.99"));
-        }  
-        alert(shoppingList + shopArray.join("\n"));
-    }
 
 /* 5. Total up the prices */
 
@@ -54,3 +46,19 @@ function makeList() {
  * Save the first alert content as message. 
  * Add total as a line below message, then alert the message. 
  */
+
+function makeList() {
+    let shoppingList = "to buy: \n";
+    let next = "";
+    let shopArray=[];
+    let total = 0;
+    for (let item = 1; item <= 2; item++){  
+       next = prompt("item # " + item + " : " + " enter item name, price");
+        shopArray.push(next.split(","))
+        }  
+       for (let item = 1; item <= 2; item++){ 
+        total += shopArray[item][1];
+        }
+                let massage = shoppingList + shopArray.join("\n");
+                massage+= "total is " + total;
+    }
