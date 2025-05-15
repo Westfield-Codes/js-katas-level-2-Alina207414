@@ -11,14 +11,7 @@
  * add a line break after each item added
  * when loop's done, alert the list
  */
-function makeList() {
-    let shoppingList = "to buy: \n";
-    let shopArray = [];
-    for (let item = 1; item <= 5; item++){ 
-        shopArray.push(prompt(" item " + item));
-        }  
-        alert(shoppingList + shopArray.join("\n"));
-    }
+
  
 /* 2. for loop and array with toString */
 
@@ -44,6 +37,14 @@ function makeList() {
  * Convert that entry to an itemPrice array by using string.split() and use a comma as delimiter
  * Push the itemPrice array to shopArray
  */
+function makeList() {
+    let shoppingList = "to buy: \n";
+    let shopArray = [];
+    for (let item = 1; item <= 5; item++){ 
+        shopArray.push(prompt(" item " + item + " enter item name, price: like milk, 1.99"));
+        }  
+        alert(shoppingList + shopArray.join("\n"));
+    }
 
 /* 5. Total up the prices */
 
