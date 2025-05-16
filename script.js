@@ -54,11 +54,13 @@ function makeList() {
     let total = 0;
     for (let item = 1; item <= 2; item++){  
        next = prompt("item # " + item + " : " + " enter item name, price");
-        shopArray.push(next.split(","))
+        shopArray.push(next.split(","));
         }  
        for (let item = 1; item <= 2; item++){ 
-        total += shopArray[item][1];
+        total += parseFloat(shopArray[item-1][1]);
         }
-                let massage = shoppingList + shopArray.join("\n");
-                massage+= "total is " + total;
-    }
+                let message = shoppingList + shopArray.join("\n");
+                message+= "\ntotal is " + total;
+                alert(message)
+
+                }
